@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Tebakan</title>
+</head>
+<body style="background-color: rgb(19, 19, 19); color: white;">
+    <center>
+    <h1 style="margin-bottom: 30px;">Hasil Tebakan</h1>
+    <p style="font-size: 19px; margin-top: 10px;">Karakter yang Anda pikirkan adalah: <b>{{ character_name }}</b></p>
+    {% if character_image %}
+        <img src="{{ character_image }}" alt="{{ character_name }}" style="width: 250px; margin-top: 20px; border-radius: 5px; border: 2px solid white;">
+    {% endif %}
+    <br><br><br>
+    <a href="{{ url_for('reset') }}"><button style="background-color: #0095ff; cursor: pointer; padding: 7px; padding-left: 15px; padding-right: 15px; border: none; border-radius: 4px; color: white;">Main Lagi</button></a>
+    </center>
+</body>
+</html>
